@@ -1,11 +1,12 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from app.api.router import api_router
+from app.core.config import settings
 
-@app.get("/")
-async def root():
-    return {"message" : "RED FLAG is FLAGGING AS HELL"}
+app = FastAPI(
+    title = settings.app_name,
+    description= "AI powered Legal Scanner",
+    version = settings.app_version,
+)
 
-@app.get("/health")
-async def check():
-    return {"status" : "HEALTH is HEALTHY"}
+app.include_router(api_router)
