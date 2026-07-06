@@ -1,10 +1,6 @@
 from enum import Enum
 from pydantic import BaseModel
-
-class Severity(str, Enum):
-    LOW = "LOW",
-    MEDIUM = "MEDIUM",
-    HIGH = "HIGH"
+from app.schemas.enums import Severity
 
 class Rule(BaseModel):
     name : str
@@ -14,4 +10,3 @@ class Rule(BaseModel):
     explanation : str
     
     patterns : list[str]
-    
