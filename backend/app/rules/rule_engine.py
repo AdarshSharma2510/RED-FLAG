@@ -22,6 +22,7 @@ class RuleEngine:
                                 RiskFinding(
                                     clause_id=clause.clause_id,
                                     sentence_id=sentence.sentence_id,
+                                    clause_text= clause.text,
                                     matched_text=sentence.text,
                                     category=rule.category,
                                     severity=rule.severity,

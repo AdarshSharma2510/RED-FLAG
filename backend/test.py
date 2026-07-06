@@ -1,7 +1,6 @@
 from pathlib import Path
 from app.services.scan.scan_service import ScanService
 from app.services.document.loader import DocumentLoader
-from app.services.document.processor import DocumentProcessor
 
 scan_service = ScanService()
 
@@ -29,9 +28,19 @@ from app.rules.rule_engine import RuleEngine
 
 rule_engine = RuleEngine()
 
-# findings = rule_engine.scan(document)
+findings = rule_engine.scan(document)
 
 print("\nDetected Findings")
 
-for finding in findings:
-    print(finding.model_dump())
+if not findings:
+    print("No rule-based findings detected.")
+else:
+    for finding in findings:
+        print(finding.model_dump_json(indent=4))
+    
+from app.ai.prompt_builder import PromptBuilder
+
+if findings:
+    print("\nGenerated Prompt")
+    print("=" * 80)
+    print(PromptBuilder.build(findings[0]))
