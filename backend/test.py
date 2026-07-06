@@ -40,7 +40,8 @@ else:
     
 from app.ai.prompt_builder import PromptBuilder
 
-if findings:
-    print("\nGenerated Prompt")
-    print("=" * 80)
-    print(PromptBuilder.build(findings[0]))
+prompt = PromptBuilder.build(findings[0])
+
+for message in prompt.messages:
+    print(f"\n[{message.type.upper()}]")
+    print(message.content)

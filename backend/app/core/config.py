@@ -6,13 +6,14 @@ class Settings(BaseSettings):
     app_name: str
     app_version: str
 
-    model_provider: str
     model_name: str
 
     database_url: str
 
-    gemini_api_key: str = ""
+    gemini_api_key: str
 
+    huggingface_access_token : str
+    
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8"

@@ -1,32 +1,41 @@
+from langchain_core.prompts import ChatPromptTemplate
+
 from app.schemas.finding import RiskFinding
 
 
 class PromptBuilder:
-    @staticmethod
-    def build(finding: RiskFinding) -> str:
-        return f"""
-You are a legal contract analysis assistant.
+    _template = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system",
+                (
+                    "You are an expert legal contract analyzer.\n"
+                    "Your job is to explain why a legal clause may be risky.\n"
+                    "Respond clearly and professionally."
+                ),
+            ),
+            (
+                "human",
+                (
+                    "Clause:\n"
+                    "{clause}\n\n"
+                    "Detected Category: {category}\n"
+                    "Rule Explanation: {rule_explanation}\n\n"
+                    "Explain:\n"
+                    "1. Why this clause may be risky.\n"
+                    "2. What legal consequences it could have.\n"
+                    "3. Whether a user should negotiate this clause."
+                ),
+            ),
+        ]
+    )
 
-Analyze the following legal clause.
-
-Category:
-{finding.category}
-
-Severity:
-{finding.severity}
-
-Rule Explanation:
-{finding.explanation}
-
-Clause:
-{finding.clause_text}
-
-Matched Sentence:
-{finding.matched_text}
-
-Your task:
-1. Explain why this clause may be risky.
-2. Explain the legal implications.
-3. Mention if the rule engine appears correct or not. It may be wrong.
-4. Respond professionally.
-""".strip()
+    @classmethod
+    def build(cls, finding: RiskFinding):
+        return cls._template.invoke(
+            {
+                "clause": finding.clause_text,
+                "category": finding.category,
+                "rule_explanation": finding.explanation,
+            }
+        )
