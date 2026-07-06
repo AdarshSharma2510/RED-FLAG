@@ -45,3 +45,14 @@ prompt = PromptBuilder.build(findings[0])
 for message in prompt.messages:
     print(f"\n[{message.type.upper()}]")
     print(message.content)
+    
+from app.ai.llm import LLM
+from app.ai.prompt_builder import PromptBuilder
+
+llm = LLM()
+
+prompt = PromptBuilder.build(findings[0])
+
+response = llm.invoke(prompt)
+
+print(response.content)
