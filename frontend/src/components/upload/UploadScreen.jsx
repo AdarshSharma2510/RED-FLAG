@@ -7,7 +7,7 @@ import FeatureHighlights from "./FeatureHighlights";
 import UploadZone from "./UploadZone";
 import SelectedFile from "./SelectedFile";
 
-export default function UploadScreen() {
+export default function UploadScreen({ onAnalyze, analyzing }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const fileInputRef = useRef(null);
@@ -50,9 +50,12 @@ export default function UploadScreen() {
           />
 
           <div className="flex justify-center">
-            <Button>
-              Analyze Contract
-            </Button>
+            <Button
+              onClick={() => onAnalyze(selectedFile)}
+              disabled={analyzing}
+            >
+              {analyzing ? "Analyzing..." : "Analyze Contract"}
+            </Button> 
           </div>
         </>
       )}
