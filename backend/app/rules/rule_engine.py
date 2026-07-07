@@ -16,19 +16,24 @@ class RuleEngine:
                 sentence_text = sentence.text.lower()
 
                 for rule in self.rules:
+                    matched = False
+
                     for pattern in rule.patterns:
                         if pattern.lower() in sentence_text:
-                            findings.append(
-                                RiskFinding(
-                                    clause_id=clause.clause_id,
-                                    sentence_id=sentence.sentence_id,
-                                    clause_text= clause.text,
-                                    matched_text=sentence.text,
-                                    category=rule.category,
-                                    severity=rule.severity,
-                                    explanation=rule.explanation,
-                                    trigger_source=TriggerSource.RULE_ENGINE,
-                                )
-                            )
+                            matched = True
+                            break
 
+                    if matched:
+                        findings.append(
+                            RiskFinding(
+                                clause_id=clause.clause_id,
+                                sentence_id=sentence.sentence_id,
+                                clause_text=clause.text,
+                                matched_text=sentence.text,
+                                category=rule.category,
+                                severity=rule.severity,
+                                explanation=rule.explanation,
+                                trigger_source=TriggerSource.RULE_ENGINE,
+                            )
+                        )
         return findings

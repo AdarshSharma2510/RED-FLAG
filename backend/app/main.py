@@ -1,12 +1,11 @@
 from fastapi import FastAPI
 
 from app.api.router import api_router
-from app.core.config import settings
 
 app = FastAPI(
-    title = settings.app_name,
-    description= "AI powered Legal Scanner",
-    version = settings.app_version,
+    title="Red Flag API",
+    description="AI-powered legal contract analyzer",
+    version="1.0.0",
 )
 
 app.include_router(api_router)
