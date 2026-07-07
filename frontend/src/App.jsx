@@ -1,18 +1,31 @@
-function App() {
-  return (
-    <main className="min-h-screen bg-slate-50">
-      <div className="mx-auto flex min-h-screen max-w-6xl items-center justify-center px-6">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            RED FLAG
-          </h1>
+import { useState } from "react";
 
-          <p className="mt-4 text-lg text-slate-600">
-            AI-Powered Legal Contract Risk Analyzer
-          </p>
+import AppLayout from "./components/layout/AppLayout";
+import Logo from "./components/layout/Logo";
+import UploadScreen from "./components/upload/UploadScreen";
+
+const initialState = {
+  status: "upload",
+  file: null,
+  result: null,
+  error: null,
+};
+
+function App() {
+  const [appState, setAppState] = useState(initialState);
+
+  return (
+    <AppLayout>
+      <header className="mb-16">
+        <Logo />
+      </header>
+
+      <section className="flex flex-1 items-center justify-center">
+        <div className="w-full max-w-5xl rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
+          {appState.status === "upload" && <UploadScreen />}
         </div>
-      </div>
-    </main>
+      </section>
+    </AppLayout>
   );
 }
 
