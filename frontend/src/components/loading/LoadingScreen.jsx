@@ -18,7 +18,7 @@ export default function LoadingScreen() {
       setMessageIndex((prev) =>
         Math.min(prev + 1, loadingMessages.length - 1)
         );
-    }, 2200);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);

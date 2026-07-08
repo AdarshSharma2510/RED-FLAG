@@ -33,18 +33,18 @@ export default function ResultCard({ result }) {
       {/* Metadata */}
 
       <div className="mt-6 flex flex-wrap gap-2">
-
+{/* 
         <MetadataPill>
           Clause #{finding.clause_id}
         </MetadataPill>
 
         <MetadataPill>
           Sentence #{finding.sentence_id}
-        </MetadataPill>
+        </MetadataPill> */}
 
-        <MetadataPill>
+        {/* <MetadataPill>
           {finding.trigger_source}
-        </MetadataPill>
+        </MetadataPill> */}
 
       </div>
 
