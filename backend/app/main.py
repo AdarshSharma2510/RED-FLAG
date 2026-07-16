@@ -12,7 +12,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://red-flag-nu.vercel.app"
+        "https://red-flag-nu.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
