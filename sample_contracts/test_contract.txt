@@ -1,12 +1,74 @@
-RESIDENTIAL LEASE AGREEMENT
-1. PARTIES AND PREMISES
-This Agreement is entered into between Apex Realty Holdings ("Landlord") and the undersigned ("Tenant") for the premises located at 742 Evergreen Terrace, Apt 4B.
+Privacy Statement
 
-2. TERM AND AUTOMATIC RENEWAL
-The lease shall begin on August 1, 2026, and terminate on July 31, 2027. Upon expiration, this lease shall automatically renew for successive one-year terms at a mandatory 25% rent increase unless the Tenant provides written notice via certified mail exactly ninety-five (95) days prior to the expiration date. Notice provided at ninety-four (94) days or earlier than one hundred (100) days shall be deemed invalid.
+Infosys Limited having its registered office at Electronics City, Hosur Road, Bangalore – 560100, including its subsidiaries, associates and affiliated companies (collectively referred to as “Infosys”) has a requirement to collect and process Personal Information (“PI”) or Sensitive Personal Data or Information (“SPDI”), together “Personal Data”, from you (the “you/your”) in accordance with the Information Technology (Reasonable security practices and procedures and sensitive personal data or Information) Rules, 2011 (“Rules”). The term PI as used herein shall mean any information that relates to a natural person, which, either directly or indirectly, in combination with other information available or likely to be available with a Body Corporate, is capable of identifying such person.
 
-3. RIGHT OF ENTRY AND SURVEILLANCE
-The Landlord reserves the absolute right to enter the premises at any hour of the day or night, without prior notice to the Tenant, for the purposes of inspection, repair, or showing the property to prospective tenants or buyers. The Tenant agrees that the Landlord may maintain security cameras in common areas, including the interior living room and hallways, to ensure property preservation, and Tenant waives any right to privacy regarding these interior feeds.
 
-4. MAINTENANCE, REPAIRS, AND AS-IS CONDITION
-The Tenant accepts the premises in its absolute "as-is" condition. The Tenant explicitly waives the implied warranty of habitability. The Tenant shall be solely responsible for all maintenance and repairs, including but not limited to HVAC failure, plumbing blockages, structural roof leaks, mold remediation, and pest control, regardless of the cause or origin of the defect. Failure to repair any defect within 48 hours constitutes a material breach of this lease.
+Personal data elements collected:
+
+Candidate Name
+Candidate Email Address
+Candidate Phone Number
+Candidate Address
+Date of Birth
+College Roll Number
+Photograph
+Resume
+Educational Details:
+X th: CGPA, Name of Board, School Name, Year of Passing, State, Country
+XII th: CGPA, Name of Board, School Name, Year of Passing, State, Country
+Diploma (if applicable): CGPA, Specialization/ Branch, Institute Name, University Name, Year of Passing, State, Country
+Graduation: CGPA, Specialization/ Branch, Institute Name, University Name, Year of Passing, State, Country
+Post-Graduation (if applicable): CGPA, Specialization/ Branch, Institute Name, University Name, Year of Passing, State, Country.
+Details pertaining to background checks (only if you are shortlisted) such as whether convicted by a court of law, any arrest or summons issued by a court of law against you, any criminal proceedings pending against you, whether subjected to any sanctions and/or investigation by any financial regulator/ government authority, etc.
+
+For candidates shortlisted for interview process: Your facial images captured during interview, Facial images captured during proctored assessments (where applicable), Face Descriptor (512/1024- embeddings for the face), AI/ML based Facial Analysis results.
+
+
+Purpose of Processing:
+
+Your Personal Data will be used:
+
+For Infosys recruitment related process including uniquely identifying the candidate at the application stage, checking the identification of the candidate, etc.
+To facilitate IVR call by our authorized vendor for confirming your availability for the interview, sending reminder and for feedback collection.
+To compare candidate’s facial images collected at each stage of recruitment process using automated AI/ML algorithms, to verify whether it is the same person appearing at all the stages and to prevent impersonation, frauds etc.
+To carry out various employer related activities if you are selected to join the organization.
+To send you mails regarding survey and feedbacks.
+For internal management on status updates between authorized users.
+To perform background verification by our authorized vendor.
+To enable us to ensure that we are compliant with any applicable labor and/or other relevant laws.
+
+Data Recipients:
+
+Your Personal Data will be accessible to certain authorized data recipients for the above processing of personal data which may include internal recipients within Infosys Ltd., its subsidiaries, or affiliates such as Recruitment, Human Resource, Finance, Facilities, Immigration, Project Delivery Units, Units/Org Leadership, our authorized service providers who may require access to the same for processing in relation to the above stated purpose(s), Auditors (internal/external), Infosys’ Clients (where applicable) based contractual obligations, Government Bodies including statutory, regulatory authorities, law-enforcement agencies (as applicable), and any other parties expressly or impliedly authorized by you for receiving such disclosures.
+
+
+Data transfer (International):
+
+Personal Data listed above may be transferred to our offices located globally, and to the servers of our authorized service providers.
+
+
+Data Storage:
+
+Your Personal Data will reside on Infosys servers in India and on our servers of our authorized service providers (including cloud service provider’s servers) located in India.
+
+
+Security Measures:
+
+Infosys adopts reasonable and appropriate security practices and procedures including administrative, physical security, and technical controls in order to safeguard your Personal Data.
+
+
+Retention Period:
+
+We retain your personal data as long as necessary for the purposes listed here above. Your personal information that is no longer required to be retained as per legal and business requirements will be disposed in a secure manner.
+
+
+Your Rights:
+
+You are entitled at any time to access and rectify your Personal Data. These rights may be exercised by sending us a message at privacy@infosys.com.
+
+
+Disclaimer:
+You acknowledge that any personal information that you share about data subjects (other than yourself) is shared by you only after seeking consent from the person to whom the Personal Data belongs.
+
+
+By Clicking the below button, you consent to the above collection and processing of your personal data by Infosys for the above purpose(s).
