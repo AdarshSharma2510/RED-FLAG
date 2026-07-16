@@ -6,6 +6,15 @@ RED FLAG is an AI-powered Legal Contract Risk Analyzer that helps users identify
 
 ---
 
+## 🌐 Live Demo
+
+**Frontend:** https://red-flag-nu.vercel.app
+
+**Backend API (Swagger):** https://red-flag-d2eh.onrender.com/docs
+
+---
+
+
 ## ✨ Features
 
 - 📄 Upload contracts in **PDF**, **DOCX**, and **TXT** formats
@@ -23,31 +32,40 @@ RED FLAG is an AI-powered Legal Contract Risk Analyzer that helps users identify
 ## 🏗️ Architecture
 
 ```text
-                    +----------------------+
-                    |   React Frontend     |
-                    |----------------------|
-                    | Upload Contract UI   |
-                    | Loading Screen       |
-                    | Results Dashboard    |
-                    +----------+-----------+
-                               |
-                               | HTTP (Axios)
-                               |
-                    +----------v-----------+
-                    |     FastAPI API      |
-                    +----------+-----------+
-                               |
-             +-----------------+------------------+
-             |                                    |
-             |                                    |
-    Rule-Based Risk Engine                 Google Gemini
-      (Legal Rules)                    (AI Analysis via LangChain)
-             |                                    |
-             +-----------------+------------------+
-                               |
-                       JSON Response
-                               |
-                        React Frontend
+                           +----------------------+
+                           |        User          |
+                           +----------+-----------+
+                                      |
+                                      |
+                                      v
+                    +-------------------------------+
+                    |  Vercel (React + Vite)        |
+                    |-------------------------------|
+                    | • Upload Contract UI          |
+                    | • Loading Screen              |
+                    | • Results Dashboard           |
+                    +---------------+---------------+
+                                    |
+                                    | HTTPS (Axios)
+                                    |
+                                    v
+                    +-------------------------------+
+                    | Render (FastAPI Backend)      |
+                    +---------------+---------------+
+                                    |
+               +--------------------+--------------------+
+               |                                         |
+               |                                         |
+      Rule-Based Risk Engine                 Google Gemini
+         (Legal Rules)                  (AI Analysis via LangChain)
+               |                                         |
+               +--------------------+--------------------+
+                                    |
+                             Structured JSON
+                                    |
+                                    |
+                                    v
+                         React Results Interface
 ```
 
 ---
@@ -68,6 +86,11 @@ RED FLAG is an AI-powered Legal Contract Risk Analyzer that helps users identify
 - LangChain
 - Google Gemini
 - Rule-Based Legal Risk Detection
+
+### Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
 
 ---
 
@@ -164,19 +187,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 uvicorn app.main:app --reload
-```
-
-Backend runs on:
-
-```
-http://127.0.0.1:8000
-```
-
-Swagger documentation:
-
-```
-http://127.0.0.1:8000/docs
-```
 
 ---
 
@@ -188,13 +198,6 @@ cd frontend
 npm install
 
 npm run dev
-```
-
-Frontend runs on:
-
-```
-http://localhost:5173
-```
 
 ---
 
@@ -239,6 +242,15 @@ This project was developed to demonstrate:
 - Resume-quality full-stack engineering
 
 ---
+
+## 📌 Project Status
+
+✅ Completed
+
+🚀 Deployed
+
+🎓 Portfolio Project
+
 
 ## 🔮 Future Improvements
 
