@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import AppLayout from "./components/layout/AppLayout";
 import Logo from "./components/layout/Logo";
+import Footer from "./components/layout/Footer";
 
 import UploadScreen from "./components/upload/UploadScreen";
 import LoadingScreen from "./components/loading/LoadingScreen";
@@ -58,7 +59,6 @@ function App() {
 
       <section className="flex flex-1 items-center justify-center">
         <div className="w-full max-w-6xl rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
-
           {appState.status === "upload" && (
             <UploadScreen
               onAnalyze={handleAnalyze}
@@ -66,9 +66,7 @@ function App() {
             />
           )}
 
-          {appState.status === "loading" && (
-            <LoadingScreen />
-          )}
+          {appState.status === "loading" && <LoadingScreen />}
 
           {appState.status === "results" && (
             <ResultsScreen
@@ -76,9 +74,10 @@ function App() {
               onAnalyzeAnother={handleAnalyzeAnother}
             />
           )}
-
         </div>
       </section>
+
+      <Footer />
     </AppLayout>
   );
 }
